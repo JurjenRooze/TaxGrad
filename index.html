@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax Calculator for Graduate Students</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tax Calculator for Graduate Students</h1>
+      <p>Calculate how the new tax bill that passed congress would affect your budget</p>
+    </header>
+      <p>
+        Stipend:<br />
+        <input type="number" id="stipend" name="stipend" value="25000" />$/yr<br /><br />
+        Tuition waiver:<br />
+        <input type="number" id="tuition" name="tuition" value="37038" />$/yr<br /><br />
+        Other fees covered by university:<br />
+        <input type="number" id="fees" name="fees" value = "0" />$/yr<br /><br />
+        <input type="button" value="Calculate*" onclick="calcAll()">
+      </p>
+      <p>
+        <table width=300px>
+          <tr>
+            <td>Standard deduction:</td>
+            <td><output id="standard_deduction" /></td>
+          </tr>
+          <tr>
+            <td>Exemption:</td><td><output id="exemption" name="exemption" /></td>
+          </tr>
+          <tr>
+            <td>Taxable income:</td>
+            <td><output name="taxable" id="taxable" for="stipend tuition fees" /></td>
+          </tr>
+          <tr><td>&nbsp;</td></tr>
+          <tr>
+            <td>12% Tax on $0-$45k:</td>
+            <td><output id="perc12" /></td>
+          </tr>
+          <tr>
+            <td>25% Tax on $45k-$200k:</td>
+            <td><output id="perc25" /></td>
+          </tr>
+          <tr>
+            <td>Total taxes:</td>
+            <td><output id="total_tax" /></td>
+          </tr>
+          <tr><td>&nbsp;</td></tr>
+          <tr>
+            <td>Net annual income:</td>
+            <td><output id="net_income" /></td>
+          </tr>
+          <tr>
+            <td>Tax increase:**</td>
+            <td><font color="red"><output id="increase" /></font></td>
+          </tr>
+          <tr>
+            <td>Increase/Stipend:</td>
+            <td><output id="rel_increase" /></td>
+          </tr>
+        </table>
+        <font size=2>
+          *Note that these calculation are only meant to give an indication. Taxation is dependent on many other factors not included in the calculation, for instance external sources of income, marital status, etc.<br />
+          **The increase of taxes in the new plan compared to the old plan used in 2017.
+        </font>
+      </p>
+      <script type="text/javascript" src="calc.js"></script>
+  </body>
+</html>
