@@ -73,4 +73,7 @@ function calcAll() {
   calc_netincome();
   calc_tax_increase();
   calc_relative_change();
+  //show results
+  document.getElementById("results").style.display="block";
+  document.getElementById("results").style.visibility='visible';
 }
